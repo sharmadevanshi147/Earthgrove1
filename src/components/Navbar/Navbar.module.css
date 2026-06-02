@@ -1,0 +1,130 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  height: var(--navbar-height);
+  padding: 16px var(--navbar-px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    180deg,
+    rgba(13, 20, 14, 0.45) 0%,
+    rgba(13, 20, 14, 0.10) 100%
+  );
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+
+  transition:
+    background var(--duration-base) var(--ease-out-expo),
+    box-shadow var(--duration-base) var(--ease-out-expo);
+}
+
+.scrolled {
+  background: linear-gradient(
+    180deg,
+    rgba(13, 20, 14, 0.88) 0%,
+    rgba(13, 20, 14, 0.72) 100%
+  );
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* ── Logo ── */
+.logoLink {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 101;
+}
+
+.logo {
+  height: 26px;
+  width: auto;
+}
+
+/* ── Desktop nav link row ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+/* ── Hamburger (hidden on desktop) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  z-index: 101;
+  position: relative;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+/* ── Mobile menu overlay ── */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(13, 20, 14, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: calc(var(--navbar-height) + 40px) var(--space-6) 48px;
+  flex-direction: column;
+}
+
+.mobileMenu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobileLink {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.2s var(--ease-out-expo);
+  display: block;
+}
+
+.mobileLink:hover,
+.mobileLinkActive {
+  color: var(--color-white);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px var(--space-6);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+}

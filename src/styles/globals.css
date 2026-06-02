@@ -1,0 +1,72 @@
+@import './tokens.css';
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-white);
+  background-color: var(--color-bg);   /* #1e1d1d throughout */
+  line-height: var(--leading-normal);
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(13, 74, 42, 0.55);
+  color: #ffffff;
+}
+
+/* ─── Focus ring ─── */
+:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.40);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ─── Smooth image rendering ─── */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ─── Utility ─── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

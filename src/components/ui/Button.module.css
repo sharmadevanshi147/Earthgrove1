@@ -1,0 +1,56 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 130px;
+  padding: 0 24px;
+  border-radius: var(--radius-pill);
+
+  /* Glassmorphism — matches Figma: linear gradient 30% + backdrop blur */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.14) 100%
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: none;
+
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  letter-spacing: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition:
+    background var(--duration-base) var(--ease-out-expo),
+    border-color var(--duration-base) var(--ease-out-expo),
+    box-shadow var(--duration-base) var(--ease-out-expo);
+}
+
+.btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.20) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.08);
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+/* Secondary variant — slightly more transparent */
+.secondary {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+}

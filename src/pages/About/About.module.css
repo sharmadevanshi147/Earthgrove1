@@ -1,0 +1,296 @@
+/* ════════════════════════════
+   OUR STORY
+════════════════════════════ */
+.storySection {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 0 0 96px;
+}
+
+/* ── Story hero image ── */
+.storyHero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.storyHeroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.storyHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(30,29,29,0.35) 0%, rgba(30,29,29,0.85) 100%);
+}
+
+.storyInner {
+  max-width: 900px;
+  padding: 0 var(--navbar-px);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.storyHeading {
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+.storyBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.storyBody p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.60);
+}
+
+/* ════════════════════════════
+   JOIN US (floating card)
+════════════════════════════ */
+.joinCard {
+  position: relative;
+  margin: 0 64px 64px;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 360px;
+  background-color: #0d1f16;
+  background-image: url('/assets/OurWorkBG.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.joinOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 20, 14, 0.80);
+  z-index: 0;
+}
+
+.joinContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 80px 64px;
+}
+
+.joinHeading {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+.joinSub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.60);
+  letter-spacing: 0.01em;
+}
+
+.joinBtn {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 28px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  text-decoration: none;
+  margin-top: 8px;
+  transition:
+    background var(--duration-base) var(--ease-out-expo),
+    border-color var(--duration-base) var(--ease-out-expo);
+}
+
+.joinBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* ════════════════════════════
+   CONTACT FORM
+════════════════════════════ */
+.formSection {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 96px var(--navbar-px);
+}
+
+.formInner {
+  max-width: 1728px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.formHeading {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldFull {
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.50);
+  letter-spacing: 0.01em;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-white);
+  outline: none;
+  transition: border-color 0.2s var(--ease-out-expo);
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.input:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.50);
+}
+
+.textarea {
+  resize: none;
+  line-height: 1.7;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 18px 0;
+  background: #0d4a2a;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background 0.25s var(--ease-out-expo);
+}
+
+.submitBtn:hover {
+  background: #145c35;
+}
+
+/* ════════════════════════════
+   RESPONSIVE
+════════════════════════════ */
+@media (max-width: 1024px) {
+  .storySection {
+    padding: 140px var(--space-8) 80px;
+  }
+
+  .storyHeading {
+    font-size: 60px;
+  }
+
+  .joinCard {
+    margin: 0 40px 40px;
+  }
+
+  .joinHeading {
+    font-size: 48px;
+  }
+
+  .formSection {
+    padding: 80px var(--space-8);
+  }
+
+  .formHeading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .storySection {
+    padding: 120px var(--space-6) 64px;
+  }
+
+  .storyHeading {
+    font-size: 44px;
+  }
+
+  .joinCard {
+    margin: 0 16px 24px;
+    border-radius: 16px;
+    min-height: 280px;
+  }
+
+  .joinHeading {
+    font-size: 36px;
+  }
+
+  .joinContent {
+    padding: 56px 28px;
+  }
+
+  .formSection {
+    padding: 64px var(--space-6);
+  }
+
+  .formHeading {
+    font-size: 32px;
+  }
+}

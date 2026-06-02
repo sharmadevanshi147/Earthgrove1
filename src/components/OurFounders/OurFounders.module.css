@@ -1,0 +1,168 @@
+/* ── Section ── */
+.section {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 96px var(--navbar-px);
+}
+
+/* ── Inner container ── */
+.inner {
+  max-width: 1728px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* ── Heading block ── */
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.sectionLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+/* ── Cards grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* ── Card ── */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Card image ── */
+.cardImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out-expo);
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.06);
+}
+
+/* Role overlay at bottom of image */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 22px;
+}
+
+.overlayRole {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Card body ── */
+.cardBody {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.founderName {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: var(--tracking-tight);
+}
+
+.founderBio {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-white-60);
+}
+
+/* ── CTA ── */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-pill);
+  transition:
+    border-color var(--duration-base) var(--ease-out-expo),
+    background var(--duration-base) var(--ease-out-expo),
+    transform var(--duration-base) var(--ease-out-expo);
+}
+
+.cta:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.50);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .section { padding: 80px var(--space-8); }
+  .heading { font-size: 48px; }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 64px var(--space-6); }
+  .heading { font-size: 36px; }
+  .founderName { font-size: 22px; }
+}

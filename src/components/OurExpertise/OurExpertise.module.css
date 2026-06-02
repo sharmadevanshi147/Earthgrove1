@@ -1,0 +1,170 @@
+/* ── Section ── */
+.section {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 0 0 96px;
+}
+
+/* ── Header ── */
+.header {
+  padding: 96px var(--navbar-px) 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+/* ── 3 × 3 grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+/* ── Cell ── */
+.cell {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+/* ── Cell image ── */
+.cellImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out-expo), filter 0.5s ease;
+  filter: brightness(0.75);
+}
+
+.cell:hover .cellImage {
+  transform: scale(1.08);
+  filter: brightness(0.45);
+}
+
+/* ── Always-visible label (bottom) ── */
+.cellFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 20px 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.70) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.cell:hover .cellFooter {
+  opacity: 0;
+}
+
+.cellLabel {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: var(--tracking-tight);
+}
+
+.cellSub {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+/* ── Hover full overlay ── */
+.cellOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.4s var(--ease-out-expo),
+    transform 0.4s var(--ease-out-expo);
+  z-index: 2;
+  padding: 24px;
+  text-align: center;
+}
+
+.cell:hover .cellOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cellLabelHover {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: var(--tracking-tight);
+}
+
+.cellSubHover {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.50);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.cellArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 50%;
+  color: var(--color-white);
+  margin-top: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .header { padding: 80px var(--space-8) 48px; }
+  .heading { font-size: 48px; }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .header { padding: 64px var(--space-6) 40px; }
+  .heading { font-size: 36px; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .cellLabel { font-size: 15px; }
+}

@@ -1,0 +1,217 @@
+/* ════════════════════════════
+   HERO
+════════════════════════════ */
+.hero {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 160px var(--navbar-px) 64px;
+  text-align: center;
+}
+
+.heroHeading {
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+.breadcrumb {
+  margin-top: 18px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.40);
+  letter-spacing: 0.01em;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.40);
+  text-decoration: none;
+  transition: color 0.2s var(--ease-out-expo);
+}
+
+.breadcrumb a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sep {
+  margin: 0 6px;
+  opacity: 0.5;
+}
+
+/* ════════════════════════════
+   PROJECT GRID
+════════════════════════════ */
+.grid {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 0 64px 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* ════════════════════════════
+   PROJECT CARD
+════════════════════════════ */
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #0d1f16;
+  background-image: url('/assets/OurWorkBG.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Image (top section) ── */
+.cardImageWrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s var(--ease-out-expo);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.04);
+}
+
+/* Dark overlay over the texture behind the text */
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  /* Gradient: transparent over the image, dark below */
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(13, 20, 14, 0.92) 62%,
+    rgba(13, 20, 14, 0.97) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Text body (bottom section) ── */
+.cardBody {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 32px 32px;
+}
+
+.cardCategory {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  height: 34px;
+  padding: 0 20px;
+  margin-top: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  text-decoration: none;
+  transition:
+    background var(--duration-base) var(--ease-out-expo),
+    border-color var(--duration-base) var(--ease-out-expo);
+}
+
+.cardBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* ════════════════════════════
+   RESPONSIVE
+════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 140px var(--space-8) 56px;
+  }
+
+  .heroHeading {
+    font-size: 60px;
+  }
+
+  .grid {
+    padding: 0 40px 64px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 120px var(--space-6) 48px;
+  }
+
+  .heroHeading {
+    font-size: 44px;
+  }
+
+  .grid {
+    padding: 0 16px 32px;
+    gap: 16px;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .cardBody {
+    padding: 16px 24px 28px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+}

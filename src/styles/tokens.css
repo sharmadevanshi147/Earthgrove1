@@ -1,0 +1,71 @@
+/* ─────────────────────────────────────────────
+   EARTHGROVE — Design Tokens
+   Single source of truth for the entire site.
+───────────────────────────────────────────── */
+
+:root {
+  /* ── Site Background ── */
+  --color-bg:           #1e1d1d;
+
+  /* ── Whites ── */
+  --color-white:        #ffffff;
+  --color-white-90:     rgba(255, 255, 255, 0.90);
+  --color-white-60:     rgba(255, 255, 255, 0.60);
+
+  /* ── Forest greens (navbar glass) ── */
+  --color-forest-900:   #0d1f16;
+
+  /* ── Typography ── */
+  --font-display: 'Lora', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-body-sm:  14px;
+  --text-body-md:  16px;
+  --text-body-lg:  18px;
+
+  /* Line-height */
+  --leading-tight:  1.1;
+  --leading-snug:   1.25;
+  --leading-normal: 1.5;
+
+  /* Letter-spacing */
+  --tracking-tight:  -0.02em;
+  --tracking-base:    0em;
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.12em;
+
+  /* ── Spacing scale (4px base) ── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Navbar ── */
+  --navbar-height: 78px;
+  --navbar-px:     64px;
+
+  /* ── Border radius ── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-pill: 999px;
+
+  /* ── Glass ── */
+  --blur-glass: blur(12px);
+
+  /* ── Transitions ── */
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:  120ms;
+  --duration-base:  250ms;
+  --duration-slow:  500ms;
+}

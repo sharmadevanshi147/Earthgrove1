@@ -1,0 +1,184 @@
+.section {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg);
+  padding: 96px 0;
+  overflow: hidden;
+}
+
+/* ── Top fade blend into hero ── */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Inner container ── */
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1728px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+/* ── Heading ── */
+.heading {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+  text-align: center;
+  padding: 0 var(--navbar-px);
+}
+
+/* ── Marquee wrapper ── */
+.marqueeWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Edge fades */
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), transparent);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), transparent);
+}
+
+/* ── Scrolling track ── */
+.marqueeTrack {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+  padding: 8px 0;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Logo items ── */
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  opacity: 0.55;
+  transition: opacity var(--duration-base) var(--ease-out-expo);
+  flex-shrink: 0;
+}
+
+.logoItem:hover {
+  opacity: 1;
+}
+
+/* ── accademy ── */
+.logoAccademy {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+}
+
+.accademyDot {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-white);
+}
+
+/* ── DirectDecor ── */
+.logoDirectDecor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.buildingIcon { flex-shrink: 0; }
+
+/* ── Findr ── */
+.logoFindr {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.logoFindr em { font-style: italic; }
+.findrSquares { flex-shrink: 0; }
+
+/* ── intdeco ── */
+.logoIntdeco {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+/* ── COSMIC SPORTS ── */
+.logoCosmicSports {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .section { padding: 80px 0; }
+  .heading { font-size: 48px; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 64px 0; }
+  .heading { font-size: 36px; padding: 0 var(--space-6); }
+  .marqueeTrack { gap: 56px; }
+  .fadeLeft, .fadeRight { width: 60px; }
+}
