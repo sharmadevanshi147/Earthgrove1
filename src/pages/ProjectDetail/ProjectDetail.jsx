@@ -1,9 +1,9 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import Navbar    from '../../components/Navbar/Navbar'
 import CTAFooter from '../../components/CTAFooter/CTAFooter'
-import { PROJECTS_BY_ID } from '../../data/projects'
+import { fetchProjectById, PROJECTS_BY_ID } from '../../data/projects'
 import styles    from './ProjectDetail.module.css'
 
 const fadeUp = {
@@ -13,11 +13,20 @@ const fadeUp = {
 
 export default function ProjectDetail() {
   const { id } = useParams()
-  const project = PROJECTS_BY_ID[id]
+  const [project, setProject] = useState(PROJECTS_BY_ID[id] ?? null)
+  const [loading, setLoading] = useState(!PROJECTS_BY_ID[id])
 
   const bodyRef = useRef(null)
   const bodyInView = useInView(bodyRef, { once: true, margin: '-60px' })
 
+  useEffect(() => {
+    fetchProjectById(id)
+      .then((data) => { if (data) setProject(data) })
+      .catch(() => {})
+      .finally(() => setLoading(false))
+  }, [id])
+
+  if (loading) return null
   if (!project) return <Navigate to="/projects" replace />
 
   return (

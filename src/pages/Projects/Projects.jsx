@@ -1,9 +1,9 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Navbar    from '../../components/Navbar/Navbar'
 import CTAFooter from '../../components/CTAFooter/CTAFooter'
-import { PROJECTS } from '../../data/projects'
+import { fetchProjects, PROJECTS } from '../../data/projects'
 import styles    from './Projects.module.css'
 
 /* ── Animation variants ── */
@@ -19,6 +19,11 @@ const cardVariants = {
 export default function Projects() {
   const ref    = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
+  const [projects, setProjects] = useState(PROJECTS)
+
+  useEffect(() => {
+    fetchProjects().then((data) => { if (data?.length) setProjects(data) }).catch(() => {})
+  }, [])
 
   return (
     <>
@@ -55,7 +60,7 @@ export default function Projects() {
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          {PROJECTS.map((project) => (
+          {projects.map((project) => (
             <motion.article
               key={project.id}
               className={styles.card}

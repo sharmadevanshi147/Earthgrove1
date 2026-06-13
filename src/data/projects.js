@@ -1,6 +1,42 @@
+import { sanityClient } from '../lib/sanityClient'
+
+const PROJECTS_QUERY = `*[_type == "project"] | order(order asc) {
+  "id": id.current,
+  name,
+  location,
+  category,
+  expertiseSlug,
+  year,
+  siteArea,
+  builtUpArea,
+  "image": image.asset->url,
+  intro,
+  body,
+  order
+}`
+
+/** Fetch all projects from Sanity (returns a Promise) */
+export async function fetchProjects() {
+  return sanityClient.fetch(PROJECTS_QUERY)
+}
+
+/** Fetch a single project by its slug id */
+export async function fetchProjectById(id) {
+  const results = await sanityClient.fetch(
+    `*[_type == "project" && id.current == $id][0] {
+      "id": id.current,
+      name, location, category, expertiseSlug, year,
+      siteArea, builtUpArea, "image": image.asset->url,
+      intro, body
+    }`,
+    { id }
+  )
+  return results
+}
+
 /**
- * Shared project data — referenced by Projects, ExpertiseDetail, and ProjectDetail.
- * Each entry is keyed by its URL id (used in /projects/:id).
+ * Static fallback — used until Sanity data is seeded.
+ * Components that don't yet use async fetching still import this.
  */
 export const PROJECTS = [
   {
@@ -31,7 +67,7 @@ export const PROJECTS = [
     intro:
       'A traditional temple complex drawing from classical Dravidian architecture, built for a congregation of 12,000 devotees on a hillside site in Tirupati.',
     body:
-      'The temple design draws from classical Dravidian proportions — towering gopurams, an enclosed mandapam, and a processional pradakshina path that circumambulates the sanctum. Every element was crafted by hand by artisans who travelled from Tamil Nadu, working directly in stone without templates or CNC fabrication.\n\nThe project required careful attention to site hydrology, as the hillside receives intense monsoon rainfall. A network of hidden drainage channels was designed into the platform, invisible from above but essential to the building\'s longevity. The sanctum is oriented to receive the first light of the winter solstice sunrise — a tradition carried forward from the original temple that occupied this site three centuries ago.',
+      "The temple design draws from classical Dravidian proportions — towering gopurams, an enclosed mandapam, and a processional pradakshina path that circumambulates the sanctum. Every element was crafted by hand by artisans who travelled from Tamil Nadu, working directly in stone without templates or CNC fabrication.\n\nThe project required careful attention to site hydrology, as the hillside receives intense monsoon rainfall. A network of hidden drainage channels was designed into the platform, invisible from above but essential to the building's longevity. The sanctum is oriented to receive the first light of the winter solstice sunrise — a tradition carried forward from the original temple that occupied this site three centuries ago.",
   },
   {
     id: 'horizon-school',
@@ -76,7 +112,7 @@ export const PROJECTS = [
     intro:
       'Eight private villas arranged around a shared garden in the Western Ghats, each oriented to the landscape and designed for multigenerational living.',
     body:
-      'The eight villas at Grove are not identical — each has a distinct plan and section, responding to its position within the cluster, its aspect, and the particular view it faces. What unites them is a material palette of local basalt, lime plaster, and reclaimed teak, and a shared grammar of deep verandas and operable timber screens.\n\nThe landscape is the principal architectural element. The garden was designed first — its levels, planting, and water features established before the buildings were finalised. The villas grow out of the garden rather than being placed within it, their ground floors extending into covered outdoor terraces that blur the line between inside and out. Rainwater harvesting and solar panels are integrated unobtrusively, reducing each villa\'s grid dependence by approximately 70%.',
+      "The eight villas at Grove are not identical — each has a distinct plan and section, responding to its position within the cluster, its aspect, and the particular view it faces. What unites them is a material palette of local basalt, lime plaster, and reclaimed teak, and a shared grammar of deep verandas and operable timber screens.\n\nThe landscape is the principal architectural element. The garden was designed first — its levels, planting, and water features established before the buildings were finalised. The villas grow out of the garden rather than being placed within it, their ground floors extending into covered outdoor terraces that blur the line between inside and out. Rainwater harvesting and solar panels are integrated unobtrusively, reducing each villa's grid dependence by approximately 70%.",
   },
   {
     id: 'niia-tech-park',
