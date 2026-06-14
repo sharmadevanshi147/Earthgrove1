@@ -1,22 +1,21 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './NavLink.module.css'
 
 const MotionLink = motion(Link)
 
-/**
- * NavLink — reusable navigation anchor.
- * Renders an animated underline on hover, matching Figma specs.
- */
 export default function NavLink({ href = '/', children, onClick }) {
+  const { pathname } = useLocation()
+  const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href)
+
   return (
     <MotionLink
       to={href}
       onClick={onClick}
-      className={styles.navlink}
+      className={`${styles.navlink} ${isActive ? styles.active : ''}`}
       whileHover="hovered"
       initial="rest"
-      animate="rest"
+      animate={isActive ? 'hovered' : 'rest'}
     >
       {children}
       <motion.span

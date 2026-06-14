@@ -4,25 +4,25 @@ import styles from './Testimonials.module.css'
 
 const TESTIMONIALS = [
   {
-    id: 'neera',
-    name: 'Neera Sharma',
-    company: 'Accademy',
+    id: 'dinesh',
+    name: 'Dinesh Sharma',
+    company: '',
     quote:
-      'Working with the team felt effortless. They truly listened, translated our lifestyle into design, and delivered a home that feels both functional and deeply personal. The attention to detail and transparency throughout the process built complete trust.',
+      'People build houses and these work together with us to complete it as homes. All wishes, imaginations pour in into the innovative ideas at their place accommodating ours as well. Best design.',
   },
   {
-    id: 'anil',
-    name: 'Anil Kamble',
-    company: 'Findr',
+    id: 'ravi',
+    name: 'Ravi',
+    company: '',
     quote:
-      'Their ability to balance efficiency with design quality was impressive. They understood our business needs and created a workspace that enhances productivity while still feeling welcoming and thoughtfully designed. Timelines were respected without compromising execution.',
+      'Accomplish work in time bound manner, my house architectural drawings were prepared nicely. Excellent in execution of innovative ideas, highly recommend.',
   },
   {
-    id: 'mary',
-    name: 'Mary Joseph',
-    company: 'Bharat School of Arts',
+    id: 'manish',
+    name: 'Manish',
+    company: '',
     quote:
-      'The firm brought clarity and structure to a complex project. Their collaborative approach, sensitivity to context, and strong design thinking resulted in a space that serves its purpose beautifully while leaving a lasting impact on its users.',
+      'Quick and concise communicators. Explores and provides options before final design. Innovative and professional staff. Would do business with again.',
   },
 ]
 
@@ -92,7 +92,9 @@ export default function Testimonials() {
                 <p className={styles.quote}>{TESTIMONIALS[active].quote}</p>
                 <div className={styles.attribution}>
                   <span className={styles.name}>{TESTIMONIALS[active].name}</span>
-                  <span className={styles.company}>{TESTIMONIALS[active].company}</span>
+                  {TESTIMONIALS[active].company && (
+                    <span className={styles.company}>{TESTIMONIALS[active].company}</span>
+                  )}
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -118,6 +120,15 @@ export default function Testimonials() {
                 />
               </div>
             </div>
+
+            <a
+              href="https://www.justdial.com/Delhi/EarthGrove-Near-Dwarka-Court-Dwarka-Sector-10/011PXX11-XX11-210521183522-W4A1_BZDET"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.moreBtn}
+            >
+              Read More Testimonials&nbsp;&nbsp;→
+            </a>
           </div>
 
           <span className={styles.quoteRight} aria-hidden="true">&rdquo;</span>

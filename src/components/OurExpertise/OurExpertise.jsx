@@ -5,61 +5,23 @@ import styles from './OurExpertise.module.css'
 
 const MotionLink = motion(Link)
 
+// span = number of columns this cell spans in the 6-col bento grid
+// 4-row layout across a 6-col grid:
+// Row 1: residential(4) + commercial(2)
+// Row 2: temples(2) + institutional(2) + interiors(2)
+// Row 3: farmhouse(2) + corporate(4)
+// Row 4: vaastu(2) + walkthrough(2) + greenboard(2)
 const EXPERTISE = [
-  {
-    id: 'farmhouse',
-    label: 'Farmhouse',
-    sub: 'Rustic & Rural',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'walkthrough',
-    label: '3D Walkthrough',
-    sub: 'Visualisation',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'vaastu',
-    label: 'Vaastu',
-    sub: 'Sacred Geometry',
-    img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'commercial',
-    label: 'Commercial',
-    sub: 'Retail & Office',
-    img: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'interiors',
-    label: 'Interiors',
-    sub: 'Space & Form',
-    img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'temples',
-    label: 'Temples',
-    sub: 'Devotional Design',
-    img: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'institutional',
-    label: 'Institutional',
-    sub: 'Education & Civic',
-    img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'residential',
-    label: 'Residential',
-    sub: 'Homes & Living',
-    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=75',
-  },
-  {
-    id: 'corporate',
-    label: 'Corporate',
-    sub: 'Workspace Strategy',
-    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=75',
-  },
+  { id: 'residential',  label: 'Residential',              sub: 'Homes & Living',       span: 4, img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=75' },
+  { id: 'commercial',   label: 'Commercial',                sub: 'Retail & Office',      span: 2, img: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=75' },
+  { id: 'temples',      label: 'Temples',                   sub: 'Devotional Design',    span: 2, img: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=75' },
+  { id: 'institutional',label: 'Institutional',             sub: 'Education & Civic',    span: 2, img: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=700&q=75' },
+  { id: 'interiors',    label: 'Interiors',                 sub: 'Space & Form',         span: 2, img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=75' },
+  { id: 'farmhouse',    label: 'Farmhouse',                 sub: 'Rustic & Rural',       span: 2, img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=75' },
+  { id: 'corporate',    label: 'Corporate',                 sub: 'Workspace Strategy',   span: 4, img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=75' },
+  { id: 'vaastu',       label: 'Vaastu',                    sub: 'Sacred Geometry',      span: 2, img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=75' },
+  { id: 'walkthrough',  label: '3D Walkthrough',            sub: 'Visualisation',        span: 2, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=75' },
+  { id: 'greenboard',   label: 'Green Board Certification', sub: 'Sustainable Design',   span: 2, img: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=900&q=75' },
 ]
 
 const stagger = {
@@ -98,7 +60,7 @@ export default function OurExpertise() {
           <MotionLink
             key={item.id}
             to={`/services/${item.id}`}
-            className={styles.cell}
+            className={`${styles.cell} ${styles[`span${item.span}`]}`}
             variants={fadeIn}
           >
             <img

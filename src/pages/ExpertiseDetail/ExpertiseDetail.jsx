@@ -10,245 +10,85 @@ const EXPERTISE_DATA = {
   commercial: {
     label: 'Commercial',
     projects: [
-      {
-        id: 'nandan-prospera',
-        name: 'Nandan Prospera',
-        description:
-          'Nandan Prospera features a cross-section layout with 14 buildings placed radially around a central open space, housing 2 units per floor up to the 5th floor and 10 units on the higher floors. The design combines vertical volume with considered density, allowing all units an offering the building a height that is pleasant and urban, especially when lit from inside.',
-        image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'niia-tech-park',
-        name: 'Niia Tech Park',
-        description:
-          'A contemporary tech campus designed around natural light and open collaboration. The park integrates landscaped courtyards between buildings to encourage informal interaction, creating an environment where innovation can thrive alongside nature.',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'amar-coworking-space',
-        name: 'Amar Coworking Space',
-        description:
-          'A flexible coworking environment designed for the modern professional. Thoughtfully arranged workstations, private cabins, and lounge zones flow into one another — creating a rhythm of focus and community across multiple floors.',
-        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'flipkart-myntra-warehouse', name: 'Flipkart & Myntra — 200 Warehouse Fire Exit Plans', description: 'Comprehensive fire exit and evacuation planning across 200 Flipkart and Myntra warehouse facilities, ensuring code compliance, efficient egress routes, and staff safety across multiple states.', image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80' },
+      { id: 'fashion-management-runway', name: 'Fashion Management Runway', description: 'A purpose-designed commercial runway and event space for fashion management, combining flexible staging, dramatic lighting infrastructure, and front-of-house hospitality zones.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   temple: {
     label: 'Temple',
     projects: [
-      {
-        id: 'sri-venkateswara',
-        name: 'Sri Venkateswara Mandir',
-        description:
-          'A traditional temple design that draws from classical Dravidian architecture, blending intricate stone-carving proportions with contemporary structural requirements. The complex includes a main sanctum, mandapam, and a landscaped pradakshina path.',
-        image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'amba-mata-mandir',
-        name: 'Amba Mata Mandir',
-        description:
-          'Nestled at the edge of a hillside village, this temple is designed to frame the landscape as a living backdrop. The open-air mandap and stepped kund integrate the natural terrain into the spiritual journey of worship.',
-        image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'ananth-temple',
-        name: 'Ananth Temple Complex',
-        description:
-          'A multi-shrine complex planned around a central tank. The architecture uses local sandstone and traditional joinery throughout, creating a timeless environment that honours both craft and ritual.',
-        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'kalkaji-mandir-redevelopment', name: 'Kalkaji Mandir Redevelopment Project', description: 'A sacred redevelopment restoring and amplifying the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.', image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80' },
+      { id: 'kamanda-devi-redevelopment', name: 'Kamanda Devi Redevelopment', description: 'Redevelopment of the historic Kamanda Devi temple complex, restoring traditional architectural elements while improving pilgrimage infrastructure and devotional flow.', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   temples: {
     label: 'Temples',
     projects: [
-      {
-        id: 'sri-venkateswara',
-        name: 'Sri Venkateswara Mandir',
-        description:
-          'A traditional temple design that draws from classical Dravidian architecture, blending intricate stone-carving proportions with contemporary structural requirements.',
-        image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'amba-mata-mandir',
-        name: 'Amba Mata Mandir',
-        description:
-          'Nestled at the edge of a hillside village, this temple is designed to frame the landscape as a living backdrop.',
-        image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'kalkaji-mandir-redevelopment', name: 'Kalkaji Mandir Redevelopment Project', description: 'A sacred redevelopment restoring the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.', image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80' },
+      { id: 'kamanda-devi-redevelopment', name: 'Kamanda Devi Redevelopment', description: 'Redevelopment of the historic Kamanda Devi temple complex, restoring traditional architectural elements while improving pilgrimage infrastructure.', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   institutional: {
     label: 'Institutional',
     projects: [
-      {
-        id: 'horizon-school',
-        name: 'Horizon International School',
-        description:
-          'Designed around a central learning street, Horizon School integrates classrooms, labs, and open studios along a naturally lit spine. The campus encourages collaboration while allowing each department its own distinct identity.',
-        image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'civic-library',
-        name: 'City Central Library',
-        description:
-          'A public library designed to be the intellectual heart of the city. Double-height reading rooms, flexible study pods, and a rooftop terrace create a layered environment that welcomes visitors of every age and intent.',
-        image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'unity-college',
-        name: 'Unity College of Arts',
-        description:
-          'An arts and design college built around a shared courtyard. Studios open directly onto the outdoor space, blurring the boundary between making and gathering, and encouraging cross-disciplinary practice.',
-        image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'bvm-public-school', name: 'BVM Public School', description: 'A K–12 campus designed around natural light and open learning corridors. Each block opens onto landscaped courtyards, turning movement through the school into an educational experience.', image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   residential: {
     label: 'Residential',
     projects: [
-      {
-        id: 'grove-villas',
-        name: 'Grove Villas',
-        description:
-          'A cluster of eight private villas arranged around a shared garden. Each home is oriented to capture morning light and cross-ventilation, with deep verandas that mediate between interior comfort and outdoor living.',
-        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'skyline-apartments',
-        name: 'Skyline Apartments',
-        description:
-          'A 22-storey residential tower with a compact footprint that maximises views and green space at ground level. Each apartment plan is unique, responding to its orientation and the city panorama beyond.',
-        image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'river-retreat',
-        name: 'River Retreat',
-        description:
-          'A weekend house designed to sit lightly on a riverbank site. Raised on a plinth of local laterite, the house opens completely to the water on one side while maintaining privacy from the road on the other.',
-        image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'upkari-apartments', name: 'Upkari Apartments, Sec 68 Noida', description: 'A contemporary residential complex in Sector 68, Noida, designed around shared green courts and generous cross-ventilation. Each unit is planned for privacy, natural light, and efficient living.', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80' },
+      { id: 'pareena-mi-casa', name: 'Pareena Mi Casa', description: 'A residential development balancing urban density with quality of life — landscaped podiums, sky gardens, and thoughtfully planned apartments create a community within the city.', image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80' },
+      { id: 'house-new-friends-colony', name: 'House, New Friends Colony', description: 'A private residence in New Friends Colony, Delhi, designed for a multi-generational family. Interlocking courtyards, shaded verandas, and a layered material palette create a home of quiet distinction.', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   interior: {
     label: 'Interior',
     projects: [
-      {
-        id: 'the-loft',
-        name: 'The Loft Studio',
-        description:
-          'An open-plan loft transformed into a live-work home. Custom joinery defines zones without walls, and a palette of warm timber, concrete, and aged brass runs through every surface and fitting.',
-        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'verde-restaurant',
-        name: 'Verde Restaurant',
-        description:
-          'A restaurant interior conceived around the idea of a garden brought indoors. Planting integrated into the ceiling and wall structure creates a canopy overhead, while natural materials ground the dining experience.',
-        image: 'https://images.unsplash.com/photo-1484101851003-d40c7c12f0b7?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'prism-offices',
-        name: 'Prism Corporate Offices',
-        description:
-          "A workplace interior designed to reflect a company's creative identity. Breakout pods, gallery walls, and a central kitchen-lounge balance focused work with spontaneous exchange across three floors.",
-        image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'indian-navy-office', name: 'Indian Navy Office', description: 'A disciplined interior for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   interiors: {
     label: 'Interiors',
     projects: [
-      {
-        id: 'the-loft',
-        name: 'The Loft Studio',
-        description:
-          'An open-plan loft transformed into a live-work home. Custom joinery defines zones without walls, and a palette of warm timber, concrete, and aged brass runs through every surface.',
-        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'verde-restaurant',
-        name: 'Verde Restaurant',
-        description:
-          'A restaurant interior conceived around the idea of a garden brought indoors, with planting integrated into the ceiling and wall structure.',
-        image: 'https://images.unsplash.com/photo-1484101851003-d40c7c12f0b7?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'indian-navy-office', name: 'Indian Navy Office', description: 'A disciplined interior for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   farmhouse: {
     label: 'Farmhouse',
     projects: [
-      {
-        id: 'sundale-farmhouse',
-        name: 'Sundale Farmhouse',
-        description:
-          'A sprawling farmhouse set among mango groves, designed to merge with its landscape. Stone walls, terracotta rooflines, and shaded verandas create a home that feels grown from its site.',
-        image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'valley-estate',
-        name: 'Valley Estate',
-        description:
-          'An estate for a working farm, with residence, staff quarters, storage, and processing facilities arranged around a central yard. The architecture is practical and warm in equal measure.',
-        image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'golden-valley-noida', name: 'Golden Valley, Noida', description: 'A farmhouse estate in Noida designed around organic landscaping and rural materiality — local stone, timber screens, and terracotta rooflines anchor the home to its setting while delivering modern comfort.', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   walkthrough: {
     label: '3D Walkthrough',
     projects: [
-      {
-        id: 'emerald-towers-vt',
-        name: 'Emerald Towers Walkthrough',
-        description:
-          'A fully rendered 3D walkthrough of a luxury residential tower, produced for pre-sales. The animation guides viewers through lobby, model apartment, and rooftop amenities in a single seamless sequence.',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'retail-park-vt',
-        name: 'Retail Park Visualisation',
-        description:
-          'An interactive walkthrough of a proposed retail park, enabling the client to experience the scale, light, and materiality of the project before groundbreaking.',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'ellington-86-faridabad', name: '3D Walkthrough — Ellington 86, Faridabad', description: 'A fully rendered 3D walkthrough of Ellington 86, a residential project in Faridabad. The visualisation guides prospective buyers through lobbies, apartments, and amenity spaces in a single seamless sequence.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   vaastu: {
     label: 'Vaastu',
     projects: [
-      {
-        id: 'ananda-home',
-        name: 'Ananda Residence',
-        description:
-          'A family home planned entirely in accordance with Vaastu Shastra, with rooms oriented to their prescribed directions and the central brahmasthan left open to allow energy to flow freely through the house.',
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'vaastu-office',
-        name: 'Vaastu Corporate HQ',
-        description:
-          "A corporate headquarters planned using Vaastu principles, with the main entrance, MD's cabin, and finance department positioned to invite prosperity and clarity of thought.",
-        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'mansa-development', name: 'Mansa Development', description: 'A development planned wholly in accordance with Vaastu Shastra — room orientations, entry positions, and spatial proportions are derived from classical principles to promote wellbeing and prosperity.', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   corporate: {
     label: 'Corporate',
     projects: [
-      {
-        id: 'nexus-hq',
-        name: 'Nexus Corporate HQ',
-        description:
-          'A flagship headquarters that projects confidence and innovation. A triple-height atrium anchors the building, with floors of open-plan workspace and executive suites spiralling above.',
-        image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80',
-      },
-      {
-        id: 'meridian-campus',
-        name: 'Meridian Campus',
-        description:
-          'A campus for a multinational company, comprising four buildings connected by bridges and landscaped courtyards. The design encourages informal meeting across divisions and functions.',
-        image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80',
-      },
+      { id: 'indian-navy-office-corp', name: 'Indian Navy Office', description: 'A disciplined corporate interior for the Indian Navy — structured spatial hierarchy, precision materiality, and restrained detailing create a workspace that commands both authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
+      { id: 'earthgrove-office', name: 'Earthgrove Office', description: 'The Earthgrove studio — a working environment designed by and for architects. Raw materials, exposed services, and considered light create a space that is both workshop and showcase.', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80' },
+    ],
+  },
+  greenboard: {
+    label: 'Green Board Certification',
+    projects: [
+      { id: 'goa-film-city-elliptica', name: 'Goa Film City — Elliptica', description: 'A landmark entertainment complex designed for Green Board Certification — passive cooling, reclaimed material palettes, and landscape-integrated planning set a new standard for sustainable public venues in India.', image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=900&q=80' },
+    ],
+  },
+  landscape: {
+    label: 'Landscape',
+    projects: [
+      { id: 'terrace-gardens', name: 'Terrace Gardens', description: 'A series of terraced garden interventions across a multi-level residential project — planted decks, water features, and shaded walkways transform rooftop infrastructure into a network of living spaces.', image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=900&q=80' },
     ],
   },
 }

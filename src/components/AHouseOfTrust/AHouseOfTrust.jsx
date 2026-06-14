@@ -1,7 +1,8 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import floorplanImg from '../../../Assets/Frame 148.png'
 import styles from './AHouseOfTrust.module.css'
+
+const floorplanImg = `${import.meta.env.BASE_URL}assets/Frame 148.png`
 
 /* ── Animation variants ── */
 const fadeUp = {
@@ -35,56 +36,21 @@ export default function AHouseOfTrust() {
         <motion.div className={styles.left} variants={fadeUp}>
           <span className={styles.sectionLabel}>Our Philosophy</span>
           <h2 className={styles.heading}>A House of Trust</h2>
+          <p className={styles.quote}>
+            &ldquo;A building should not just sit on the earth; it should belong to it. We don&rsquo;t just build structures&mdash;we cultivate living, breathing ecosystems that nurture the souls within them.&rdquo;
+          </p>
           <p className={styles.body}>
-            We believe architecture begins with trust and is sustained through it.
-            Every project we undertake is built on honest dialogue, transparent processes,
-            and a deep respect for our clients&rsquo; vision and investment. From first sketch
-            to final execution, we commit to clarity, reliability, and thoughtful
-            decision-making, ensuring that what we design is not just aesthetically sound
-            but responsibly delivered. Our firm functions as a house of trust—where ideas
-            are handled with care, timelines are honored, and relationships are valued as
-            much as the spaces we create.
+            Earth Grove is a premier architectural and interior design consultancy dedicated to creating spaces that breathe, heal, and endure. By seamlessly merging the timeless principles of Vastu Shastra with modern sustainable engineering, Earth Grove crafts environments that are ecologically responsible, aesthetically profound, and energetically balanced.
+          </p>
+          <p className={styles.body}>
+            The name reflects a sanctuary-like approach to design: <em>Earth</em> represents the foundational, sustainable materials and structural integrity, while <em>Grove</em> symbolizes organic growth, interconnected systems, and a harmonious living ecosystem.
           </p>
         </motion.div>
 
-        {/* ── Right: placeholder image + overlaid cards ── */}
+        {/* ── Right: floor plan image ── */}
         <motion.div className={styles.right} variants={fadeUp} custom={1}>
-          {/* Background image */}
-          <img
-            src={floorplanImg}
-            alt=""
-            className={styles.bgImage}
-            aria-hidden="true"
-          />
-          {/* Dark tint overlay */}
+          <img src={floorplanImg} alt="" className={styles.bgImage} aria-hidden="true" />
           <div className={styles.overlay} aria-hidden="true" />
-
-          {/* Cards */}
-          <div className={styles.cards}>
-            {/* Top row: Mission + Vision */}
-            <div className={styles.cardsTop}>
-              <div className={styles.infoCard}>
-                <h3 className={styles.cardTitle}>Our Mission</h3>
-                <p className={styles.cardBody}>
-                  Design meaningful spaces through trust, clarity, innovation, and human-centered thinking.
-                </p>
-              </div>
-              <div className={styles.infoCard}>
-                <h3 className={styles.cardTitle}>Our Vision</h3>
-                <p className={styles.cardBody}>
-                  Shape future environments that inspire, endure, and elevate everyday experiences.
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom row: Values (full width) */}
-            <div className={styles.infoCard}>
-              <h3 className={styles.cardTitle}>Our Values</h3>
-              <p className={styles.cardBody}>
-                Integrity, transparency, empathy guiding every decision. Our design meets your goals.
-              </p>
-            </div>
-          </div>
         </motion.div>
       </motion.div>
     </section>

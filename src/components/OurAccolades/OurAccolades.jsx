@@ -3,9 +3,9 @@ import { motion, useInView } from 'framer-motion'
 import styles from './OurAccolades.module.css'
 
 const ACCOLADES = [
-  { id: 1, text: 'Winner — Best Architecture Firm, Delhi, 2026' },
-  { id: 2, text: 'Winner — The Aureum Architectural Excellence Award, 2026' },
-  { id: 3, text: 'Winner — Leela Gupta Award for Excellent Sustainable Architecture, 2026' },
+  { id: 1, text: 'Regarded as Logical Vaastu Expert by Divyavastu' },
+  { id: 2, text: 'Given Indiamart Trustseal by Indiamart' },
+  { id: 3, text: 'Featured in Livehindustan Newspaper for Kalkaji Mandir Redevelopment' },
 ]
 
 const stagger = {
@@ -58,11 +58,6 @@ export default function OurAccolades() {
                 <TrophyIcon />
               </span>
               <span className={styles.title}>{a.text}</span>
-              <span className={styles.rowArrow} aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
             </motion.li>
           ))}
         </motion.ol>

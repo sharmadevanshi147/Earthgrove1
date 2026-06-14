@@ -42,43 +42,43 @@ const CalendarIcon = () => (
 
 const PROJECTS = [
   {
-    id: 'bharat',
-    name: 'Bharat College of Arts',
-    location: 'Mumbai',
-    type: 'Institutional Architecture',
-    year: '2023',
-    description:
-      'Spaces nurture creativity through light, openness, and interaction, blending tradition with experimentation, where learning flows beyond classrooms, and architecture becomes a canvas for expression.',
-    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    id: 'veritas',
-    name: 'Veritas Residences',
-    location: 'Goa',
-    type: 'Residential Architecture',
-    year: '2024',
-    description:
-      'Homes designed for balance and privacy, where light, ventilation, and material warmth shape everyday living, fostering comfort, quiet luxury, and a sense of belonging rooted in simplicity.',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    id: 'kalkaji',
-    name: 'Kalkaji Mandir',
+    id: 'kalkaji-mandir-redevelopment',
+    name: 'Kalkaji Mandir Redevelopment',
     location: 'Delhi',
     type: 'Temple Architecture',
-    year: '2025',
+    year: '2024',
     description:
-      'Sacred form rises through devotion and history, where dense movement meets spiritual stillness, architecture channels faith, guiding pilgrims through layered thresholds into collective reverence.',
+      'A sacred redevelopment that restores and amplifies the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.',
     image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80',
   },
   {
-    id: 'nexus',
-    name: 'Nexus Business Park',
-    location: 'Pune',
-    type: 'Corporate Architecture',
-    year: '2026',
+    id: 'indian-navy-office',
+    name: 'Indian Navy Office',
+    location: 'New Delhi',
+    type: 'Interior Design',
+    year: '2023',
     description:
-      'Dynamic workspaces structured for agility and connection, integrating technology, landscape, and movement, enabling productivity where architecture supports evolving business needs.',
+      'A disciplined interior environment for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands both authority and calm.',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'bvm-public-school',
+    name: 'BVM Public School',
+    location: 'Delhi NCR',
+    type: 'Institutional Architecture',
+    year: '2023',
+    description:
+      'A K–12 campus designed around natural light and open learning corridors. Each block opens onto landscaped courtyards, turning movement through the school into an educational experience in itself.',
+    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 'goa-film-city-elliptica',
+    name: 'Goa Film City — Elliptica',
+    location: 'Goa',
+    type: 'Green Board Certification',
+    year: '2024',
+    description:
+      'A landmark entertainment complex designed for Green Board Certification — passive cooling strategies, reclaimed material palettes, and landscape-integrated planning set a new standard for sustainable public venues in India.',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80',
   },
 ]

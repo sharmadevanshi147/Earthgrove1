@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import styles from './ByTheNumbers.module.css'
 
 const STATS = [
-  { id: 'projects',   value: 40,  suffix: '+',  label: 'Projects Inaugurated' },
+  { id: 'projects',   value: 200, suffix: '+',  label: 'Projects Inaugurated' },
   { id: 'cities',     value: 8,   suffix: '+',  label: 'Cities in India & Abroad' },
   { id: 'retention',  value: 95,  suffix: '%',  label: 'Client Retention' },
   { id: 'commitment', value: 100, suffix: '%',  label: 'Commitment to Craft' },

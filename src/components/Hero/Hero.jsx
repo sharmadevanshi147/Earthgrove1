@@ -73,10 +73,6 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <motion.span className={styles.label} variants={labelVariant}>
-          Architecture &amp; Interior Design — Est. 2018
-        </motion.span>
-
         <motion.h1 className={styles.headline} variants={fadeUp}>
           Earth Grove is an architecture&nbsp;&amp;<br />
           Design Firm creating Timeless<br />
@@ -89,22 +85,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* ── Scroll indicator ── */}
-      <motion.div
-        className={styles.scrollIndicator}
-        style={{ opacity: scrollOpacity }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 0.8 }}
-        aria-hidden="true"
-      >
-        <motion.div
-          className={styles.scrollLine}
-          animate={{ scaleY: [0, 1, 1, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: [0.16, 1, 0.3, 1], times: [0, 0.4, 0.7, 1] }}
-        />
-        <span className={styles.scrollLabel}>Scroll</span>
-      </motion.div>
+
     </section>
   )
 }

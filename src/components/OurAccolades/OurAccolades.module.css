@@ -58,19 +58,6 @@
   cursor: default;
 }
 
-.row:hover {
-  background: rgba(255, 255, 255, 0.02);
-  padding-left: 12px;
-  padding-right: 12px;
-  margin-left: -12px;
-  margin-right: -12px;
-  border-radius: 8px;
-}
-
-.row:hover .rowArrow {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 /* ── Left col: number + icon ── */
 .rowLeft {

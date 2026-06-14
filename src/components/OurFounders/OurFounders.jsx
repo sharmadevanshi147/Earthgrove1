@@ -5,18 +5,18 @@ import styles from './OurFounders.module.css'
 
 const FOUNDERS = [
   {
-    id: 'aanya',
-    name: 'Aanya Mehta',
-    role: 'Principal Architect',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80',
-    bio: 'Aanya Mehta brings a grounded, context-driven approach rooted in Indian landscapes and lived experiences. With a strong focus on spatial storytelling and user needs, she shapes warm, functional environments, fostering collaboration, trust, and a design process that prioritizes people, culture, and everyday life.',
-  },
-  {
     id: 'himanshi',
     name: 'Himanshi Kaushik',
-    role: 'Design Director',
+    role: 'Founder Partner, Principal Architect',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80',
-    bio: 'An Oxford architecture graduate, Himanshi brings global perspective and refined design sensibility. Her work balances research, material understanding, and human experience, shaping thoughtful spaces. She leads with clarity, precision, and a commitment to creating architecture that is both meaningful and enduring.',
+    bio: 'An architect with a decade of experience, awarded an MSc in Sustainable Buildings: Performance and Design from Oxford Brookes University, Oxford, England. She conducts empirical research alongside design thinking and a futuristic approach to take on selective projects and figure out solutions to unforeseen challenges. Earth Grove\'s vision is clear and logical — striving to find the most efficient, sustainably civic solutions without sacrificing quality. Earth Grove\'s team is ethical, hardworking and innovative with an eye for sustainable solutions.',
+  },
+  {
+    id: 'hemant',
+    name: 'Dr. Hemant Kaushik',
+    role: 'Advisor',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80',
+    bio: 'Retd. Director of Veterinary Services, Municipal Corporation of Delhi, joins Earth Grove as an Advisor on Sustainable Policy and Governance. With more than three decades of leadership in public administration, he is known for his strategic governance, policy innovation, and groundbreaking municipal initiatives in animal welfare and urban healthcare. At Earth Grove, he brings regulatory insight and institutional experience to strengthen projects that align sustainability, wellness and civic responsibility, fostering resilient and environmentally integrated urban development.',
   },
 ]
 
