@@ -6,6 +6,9 @@ const NAMES = [
   'Shri Kalkaji Mandir Redevelopment Board',
   'BVM Group of Schools',
   'Goa Film City',
+  'Dashami',
+  'Rainlink Agro',
+  'Scorpion Capital',
 ]
 
 const ALL_NAMES = [...NAMES, ...NAMES]

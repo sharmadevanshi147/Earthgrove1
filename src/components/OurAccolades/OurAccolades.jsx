@@ -5,7 +5,7 @@ import styles from './OurAccolades.module.css'
 const ACCOLADES = [
   { id: 1, text: 'Regarded as Logical Vaastu Expert by Divyavastu' },
   { id: 2, text: 'Given Indiamart Trustseal by Indiamart' },
-  { id: 3, text: 'Featured in Livehindustan Newspaper for Kalkaji Mandir Redevelopment' },
+  { id: 3, text: 'Featured in Livehindustan Newspaper for Shri Kalkaji Mandir Redevelopment' },
 ]
 
 const stagger = {

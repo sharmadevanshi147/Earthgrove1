@@ -74,9 +74,9 @@ export default function Hero() {
         animate="visible"
       >
         <motion.h1 className={styles.headline} variants={fadeUp}>
-          Earth Grove is an architecture&nbsp;&amp;<br />
-          Design Firm creating Timeless<br />
-          ideas &amp; Buildings of Tomorrow
+          Earth Grove is an architecture &amp;<br />
+          Sustainable Design Studio creating Timeless<br />
+          and efficient Buildings of Tomorrow.
         </motion.h1>
 
         <motion.div className={styles.cta} variants={fadeUp}>

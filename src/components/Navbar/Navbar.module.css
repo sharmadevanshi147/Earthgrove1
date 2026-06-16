@@ -42,9 +42,13 @@
   z-index: 101;
 }
 
-.logo {
-  height: 26px;
-  width: auto;
+.logoText {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  white-space: nowrap;
 }
 
 /* ── Desktop nav link row ── */

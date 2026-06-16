@@ -43,17 +43,17 @@ const CalendarIcon = () => (
 const PROJECTS = [
   {
     id: 'kalkaji-mandir-redevelopment',
-    name: 'Kalkaji Mandir Redevelopment',
+    name: 'Shri Kalkaji Mandir Redevelopment',
     location: 'Delhi',
     type: 'Temple Architecture',
     year: '2024',
     description:
       'A sacred redevelopment that restores and amplifies the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.',
-    image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80',
+    image: `${import.meta.env.BASE_URL}assets/Kalkaji/WhatsApp Image 2026-06-04 at 8.12.49 PM.jpeg`,
   },
   {
     id: 'indian-navy-office',
-    name: 'Indian Navy Office',
+    name: 'Central Govt Office Interiors',
     location: 'New Delhi',
     type: 'Interior Design',
     year: '2023',

@@ -41,20 +41,20 @@ export async function fetchProjectById(id) {
 export const PROJECTS = [
   {
     id: 'kalkaji-mandir-redevelopment',
-    name: 'Kalkaji Mandir Redevelopment Project',
+    name: 'Shri Kalkaji Mandir Redevelopment Project',
     location: 'Delhi',
     category: 'Temple',
     year: '2024',
     siteArea: '2,80,000 sq ft',
     builtUpArea: '1,20,000 sq ft',
     expertiseSlug: 'temple',
-    image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1200&q=80',
+    image: `${import.meta.env.BASE_URL}assets/Kalkaji/WhatsApp Image 2026-06-04 at 8.12.49 PM.jpeg`,
     intro: 'A sacred redevelopment restoring and amplifying the spiritual presence of one of Delhi\'s most revered temples.',
-    body: 'The Kalkaji Mandir Redevelopment Project undertakes the sensitive expansion and restoration of one of Delhi\'s most visited temple complexes. Layered thresholds, processional courts, and expanded devotional spaces are woven carefully into the surrounding urban fabric, improving pilgrimage flow while preserving the sanctity of the original shrine. The work involved collaboration with the Shri Kalkaji Mandir Redevelopment Board and adhered strictly to temple architecture traditions.',
+    body: 'The Shri Kalkaji Mandir Redevelopment Project undertakes the sensitive expansion and restoration of one of Delhi\'s most visited temple complexes. Layered thresholds, processional courts, and expanded devotional spaces are woven carefully into the surrounding urban fabric, improving pilgrimage flow while preserving the sanctity of the original shrine. The work involved collaboration with the Shri Kalkaji Mandir Redevelopment Board and adhered strictly to temple architecture traditions.',
   },
   {
     id: 'indian-navy-office',
-    name: 'Indian Navy Office',
+    name: 'Central Govt Office Interiors',
     location: 'New Delhi',
     category: 'Interior',
     year: '2023',
@@ -63,7 +63,7 @@ export const PROJECTS = [
     expertiseSlug: 'interior',
     image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
     intro: 'A disciplined interior environment for the Indian Navy — precision materiality and structured hierarchy.',
-    body: 'The Indian Navy Office interior was designed to project institutional authority through material precision and spatial discipline. Structured zoning separates operational and meeting areas while maintaining a sense of unified command. Restrained materiality — honed stone, brushed metal, deep navy accents — reinforces the service\'s identity without ostentation. The project also appears under Corporate for its workplace strategy dimension.',
+    body: 'The Central Govt Office Interiors interior was designed to project institutional authority through material precision and spatial discipline. Structured zoning separates operational and meeting areas while maintaining a sense of unified command. Restrained materiality — honed stone, brushed metal, deep navy accents — reinforces the service\'s identity without ostentation. The project also appears under Corporate for its workplace strategy dimension.',
   },
   {
     id: 'bvm-public-school',
@@ -197,7 +197,7 @@ export const PROJECTS = [
   },
   {
     id: 'kamanda-devi-redevelopment',
-    name: 'Kamanda Devi Redevelopment',
+    name: 'Shri Kamanda Devi Redevelopment',
     location: 'Delhi',
     category: 'Temple',
     year: '2024',
@@ -206,7 +206,7 @@ export const PROJECTS = [
     expertiseSlug: 'temple',
     image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80',
     intro: 'Redevelopment of the historic Kamanda Devi temple complex.',
-    body: 'The Kamanda Devi Redevelopment project restores and expands a historic Delhi temple complex while improving pilgrimage infrastructure and devotional flow. Traditional architectural elements — carved stone screens, tiered shikhara, and colonnaded mandapams — are restored to original standards. New facilities, including a prasad distribution hall and improved ablution areas, are designed in a language sympathetic to the original without mimicking it directly.',
+    body: 'The Shri Kamanda Devi Redevelopment project restores and expands a historic Delhi temple complex while improving pilgrimage infrastructure and devotional flow. Traditional architectural elements — carved stone screens, tiered shikhara, and colonnaded mandapams — are restored to original standards. New facilities, including a prasad distribution hall and improved ablution areas, are designed in a language sympathetic to the original without mimicking it directly.',
   },
   {
     id: 'house-new-friends-colony',

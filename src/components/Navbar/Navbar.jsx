@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import NavLink from '../ui/NavLink'
-import logoSrc from '/assets/Logo.svg'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
@@ -42,7 +41,7 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
       >
         <Link to="/" className={styles.logoLink} aria-label="Earth Grove home">
-          <img src={logoSrc} alt="Earth Grove" className={styles.logo} />
+          <span className={styles.logoText}>Earth Grove</span>
         </Link>
 
         {/* Desktop nav */}

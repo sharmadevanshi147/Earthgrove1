@@ -17,15 +17,15 @@ const EXPERTISE_DATA = {
   temple: {
     label: 'Temple',
     projects: [
-      { id: 'kalkaji-mandir-redevelopment', name: 'Kalkaji Mandir Redevelopment Project', description: 'A sacred redevelopment restoring and amplifying the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.', image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80' },
-      { id: 'kamanda-devi-redevelopment', name: 'Kamanda Devi Redevelopment', description: 'Redevelopment of the historic Kamanda Devi temple complex, restoring traditional architectural elements while improving pilgrimage infrastructure and devotional flow.', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
+      { id: 'kalkaji-mandir-redevelopment', name: 'Shri Kalkaji Mandir Redevelopment Project', description: 'A sacred redevelopment restoring and amplifying the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.', image: `${import.meta.env.BASE_URL}assets/Kalkaji/WhatsApp Image 2026-06-04 at 8.12.49 PM.jpeg` },
+      { id: 'kamanda-devi-redevelopment', name: 'Shri Kamanda Devi Redevelopment', description: 'Redevelopment of the historic Kamanda Devi temple complex, restoring traditional architectural elements while improving pilgrimage infrastructure and devotional flow.', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   temples: {
     label: 'Temples',
     projects: [
-      { id: 'kalkaji-mandir-redevelopment', name: 'Kalkaji Mandir Redevelopment Project', description: 'A sacred redevelopment restoring the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.', image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80' },
-      { id: 'kamanda-devi-redevelopment', name: 'Kamanda Devi Redevelopment', description: 'Redevelopment of the historic Kamanda Devi temple complex, restoring traditional architectural elements while improving pilgrimage infrastructure.', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
+      { id: 'kalkaji-mandir-redevelopment', name: 'Shri Kalkaji Mandir Redevelopment Project', description: 'A sacred redevelopment restoring the spiritual presence of one of Delhi\'s most revered temples — layered thresholds, processional courts, and devotional spaces woven into the urban fabric.', image: `${import.meta.env.BASE_URL}assets/Kalkaji/WhatsApp Image 2026-06-04 at 8.12.49 PM.jpeg` },
+      { id: 'kamanda-devi-redevelopment', name: 'Shri Kamanda Devi Redevelopment', description: 'Redevelopment of the historic Kamanda Devi temple complex, restoring traditional architectural elements while improving pilgrimage infrastructure.', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   institutional: {
@@ -45,13 +45,13 @@ const EXPERTISE_DATA = {
   interior: {
     label: 'Interior',
     projects: [
-      { id: 'indian-navy-office', name: 'Indian Navy Office', description: 'A disciplined interior for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
+      { id: 'indian-navy-office', name: 'Central Govt Office Interiors', description: 'A disciplined interior for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   interiors: {
     label: 'Interiors',
     projects: [
-      { id: 'indian-navy-office', name: 'Indian Navy Office', description: 'A disciplined interior for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
+      { id: 'indian-navy-office', name: 'Central Govt Office Interiors', description: 'A disciplined interior for the Indian Navy — precision materiality, structured spatial hierarchy, and restrained detailing create a workspace that commands authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
     ],
   },
   farmhouse: {
@@ -75,7 +75,7 @@ const EXPERTISE_DATA = {
   corporate: {
     label: 'Corporate',
     projects: [
-      { id: 'indian-navy-office-corp', name: 'Indian Navy Office', description: 'A disciplined corporate interior for the Indian Navy — structured spatial hierarchy, precision materiality, and restrained detailing create a workspace that commands both authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
+      { id: 'indian-navy-office-corp', name: 'Central Govt Office Interiors', description: 'A disciplined corporate interior for the Indian Navy — structured spatial hierarchy, precision materiality, and restrained detailing create a workspace that commands both authority and calm.', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80' },
       { id: 'earthgrove-office', name: 'Earthgrove Office', description: 'The Earthgrove studio — a working environment designed by and for architects. Raw materials, exposed services, and considered light create a space that is both workshop and showcase.', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80' },
     ],
   },
