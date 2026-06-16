@@ -49,6 +49,11 @@ export const PROJECTS = [
     builtUpArea: '1,20,000 sq ft',
     expertiseSlug: 'temple',
     image: `${import.meta.env.BASE_URL}assets/Kalkaji/WhatsApp Image 2026-06-04 at 8.12.49 PM.jpeg`,
+    images: [
+      `${import.meta.env.BASE_URL}assets/Kalkaji/WhatsApp Image 2026-06-04 at 8.12.49 PM.jpeg`,
+      'https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80',
+    ],
     intro: 'A sacred redevelopment restoring and amplifying the spiritual presence of one of Delhi\'s most revered temples.',
     body: 'The Shri Kalkaji Mandir Redevelopment Project undertakes the sensitive expansion and restoration of one of Delhi\'s most visited temple complexes. Layered thresholds, processional courts, and expanded devotional spaces are woven carefully into the surrounding urban fabric, improving pilgrimage flow while preserving the sanctity of the original shrine. The work involved collaboration with the Shri Kalkaji Mandir Redevelopment Board and adhered strictly to temple architecture traditions.',
   },

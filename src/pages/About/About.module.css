@@ -190,9 +190,9 @@
 .input {
   width: 100%;
   background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 12px 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
@@ -207,7 +207,7 @@
 }
 
 .input:focus {
-  border-bottom-color: rgba(255, 255, 255, 0.50);
+  border-color: rgba(255, 255, 255, 0.50);
 }
 
 .textarea {

@@ -50,7 +50,6 @@ export default function AHouseOfTrust() {
         {/* ── Right: floor plan image ── */}
         <motion.div className={styles.right} variants={fadeUp} custom={1}>
           <img src={floorplanImg} alt="" className={styles.bgImage} aria-hidden="true" />
-          <div className={styles.overlay} aria-hidden="true" />
         </motion.div>
       </motion.div>
     </section>

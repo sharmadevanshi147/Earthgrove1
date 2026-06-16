@@ -36,24 +36,23 @@ function OurStory() {
 
         <div className={styles.storyBody}>
           <p>
-            Our journey began with a simple intention to create architecture that feels honest,
-            thoughtful, and deeply connected to people and place. After studying at Oxford, I
-            returned to India with a desire to build something of my own, and alongside Aanya,
-            Earth Grove slowly took shape in Delhi as a small, close-knit studio.
+            Himanshi Kaushik always wanted to build something of her own. That ambition took her
+            to Oxford Brookes University in England, where she completed her MSc in Sustainable
+            Buildings: Performance and Design — sharpening a vision of architecture that is as
+            ecologically responsible as it is beautiful.
           </p>
           <p>
-            Our first project, a modest warehouse for Findr, became the foundation of our
-            practice. It taught us the value of clarity, efficiency, and trust — principles that
-            continue to guide every decision we make. What started as a single opportunity
-            gradually grew into a body of work spread across 8+ cities, with over 80 projects
-            spanning homes, institutions, workplaces, and special commissions.
+            Soon after returning, on her own birthday, she gave herself the gift she had been
+            working toward all along: Earth Grove. What began as a deeply personal milestone has
+            since grown into a full-service sustainable architecture and design practice, rooted
+            in Delhi and reaching across India.
           </p>
           <p>
-            Through it all, we have remained a young, collaborative, and grounded team, one that
-            enjoys the process as much as the outcome. We believe good architecture comes from
-            listening carefully, working honestly, and designing with intention. Earth Grove is
-            not just a firm for us. It is an evolving journey shaped by people, ideas, and the
-            spaces we create together.
+            Since that first day, Earth Grove has gone on to complete over 200 projects, earning
+            the trust of prestigious clients including Flipkart, Myntra, the Shri Kalkaji Mandir
+            Redevelopment Board, BVM Group of Schools, and Goa Film City. Each project carries
+            forward the same conviction Himanshi started with — that architecture should belong
+            to the earth it stands on, not just sit upon it.
           </p>
         </div>
       </motion.div>
@@ -100,7 +99,11 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    /* TODO: wire up form submission */
+    const subject = encodeURIComponent(form.subject || `Message from ${form.name}`)
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\n${form.message}`
+    )
+    window.location.href = `mailto:care@earthgrove.in?subject=${subject}&body=${body}`
   }
 
   return (

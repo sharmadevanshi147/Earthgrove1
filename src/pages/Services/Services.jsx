@@ -19,7 +19,7 @@ const SERVICES = [
     ],
   },
   {
-    id: 'temple',
+    id: 'temples',
     title: 'Temple Architecture',
     description:
       'Crafting sacred spaces rooted in tradition and reverence. Our temple projects balance spiritual significance with architectural integrity, honouring the rituals and communities they serve.',
@@ -52,7 +52,7 @@ const SERVICES = [
     ],
   },
   {
-    id: 'interior',
+    id: 'interiors',
     title: 'Interior Design',
     description:
       'Creating interiors that feel considered, cohesive, and alive. We work closely with clients to develop spaces that are both beautiful to inhabit and functional in everyday life.',
@@ -60,6 +60,61 @@ const SERVICES = [
       'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80',
       'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
       'https://images.unsplash.com/photo-1484101851003-d40c7c12f0b7?auto=format&fit=crop&w=600&q=80',
+    ],
+  },
+  {
+    id: 'corporate',
+    title: 'Corporate',
+    description:
+      'Workspace strategy for organisations that take culture seriously. We design offices and HQs that balance productivity, identity, and wellbeing for the people who use them every day.',
+    images: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80',
+    ],
+  },
+  {
+    id: 'farmhouse',
+    title: 'Farmhouse',
+    description:
+      'Rustic and rural retreats designed to merge with their landscape. Local materials, organic forms, and a connection to the land define every farmhouse we design.',
+    images: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80',
+    ],
+  },
+  {
+    id: 'vaastu',
+    title: 'Vaastu',
+    description:
+      'Sacred geometry meets contemporary design. We plan spaces in accordance with Vaastu Shastra, deriving orientation and proportion from classical principles for wellbeing and prosperity.',
+    images: [
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80',
+    ],
+  },
+  {
+    id: 'walkthrough',
+    title: '3D Walkthrough',
+    description:
+      'Photorealistic 3D walkthroughs that bring a project to life before the first brick is laid — built for pre-sales, marketing, and design validation alike.',
+    images: [
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1484101851003-d40c7c12f0b7?auto=format&fit=crop&w=600&q=80',
+    ],
+  },
+  {
+    id: 'greenboard',
+    title: 'Green Board Certification',
+    description:
+      'Sustainable design from the ground up — passive cooling, reclaimed materials, and landscape-integrated planning, engineered to meet Green Board Certification standards.',
+    images: [
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80',
     ],
   },
 ]

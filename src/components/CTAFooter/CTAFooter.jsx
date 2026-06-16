@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './CTAFooter.module.css'
 
 function IconInstagram() {
@@ -53,11 +53,16 @@ const NAV_COLS = [
     { label: 'Contact Us', href: '/contact'  },
   ],
   [
-    { label: 'Commercial',   href: '/services/commercial'   },
-    { label: 'Temple',       href: '/services/temples'      },
-    { label: 'Institutional',href: '/services/institutional'},
-    { label: 'Residential',  href: '/services/residential'  },
-    { label: 'Interiors',    href: '/services/interiors'    },
+    { label: 'Residential',              href: '/services/residential'   },
+    { label: 'Commercial',                href: '/services/commercial'    },
+    { label: 'Temples',                   href: '/services/temples'       },
+    { label: 'Corporate',                 href: '/services/corporate'     },
+    { label: 'Institutional',             href: '/services/institutional' },
+    { label: 'Interiors',                 href: '/services/interiors'     },
+    { label: 'Farmhouse',                 href: '/services/farmhouse'     },
+    { label: 'Vaastu',                    href: '/services/vaastu'        },
+    { label: '3D Walkthrough',            href: '/services/walkthrough'   },
+    { label: 'Green Board Certification', href: '/services/greenboard'    },
   ],
   [
     { label: 'Our Founders', href: '/about' },
@@ -76,6 +81,7 @@ const SOCIALS = [
 export default function CTAFooter({ showCTA = true }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
+  const { pathname } = useLocation()
 
   return (
     <div ref={ref} id="contact" className={styles.wrapper}>
@@ -111,7 +117,7 @@ export default function CTAFooter({ showCTA = true }) {
 
           <div className={styles.footerMain}>
             <div className={styles.footerBrand}>
-              <img src="/assets/Logo.svg" alt="Earth Grove" className={styles.footerLogo} />
+              <span className={styles.footerLogo}>Earth Grove</span>
               <p className={styles.footerTagline}>
                 Creating Timeless ideas &amp;<br />Buildings of Tomorrow
               </p>
@@ -127,11 +133,19 @@ export default function CTAFooter({ showCTA = true }) {
             <div className={styles.footerNav}>
               {NAV_COLS.map((col, i) => (
                 <ul key={i} className={styles.navCol}>
-                  {col.map(({ label, href }) => (
-                    <li key={label}>
-                      <Link to={href} className={styles.navLink}>{label}</Link>
-                    </li>
-                  ))}
+                  {col.map(({ label, href }) => {
+                    const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href)
+                    return (
+                      <li key={label}>
+                        <Link
+                          to={href}
+                          className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    )
+                  })}
                 </ul>
               ))}
             </div>

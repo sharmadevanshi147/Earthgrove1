@@ -176,26 +176,43 @@ export default function Contact() {
             <div className={styles.formCardOverlay} aria-hidden="true" />
             <div className={styles.formCardInner}>
               <h2 className={styles.formHeading}>Leave us a Message</h2>
-              <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+              <form
+                className={styles.form}
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  const data = new FormData(e.target)
+                  const name = data.get('name') || ''
+                  const email = data.get('email') || ''
+                  const phone = data.get('phone') || ''
+                  const subjectField = data.get('subject') || `Message from ${name}`
+                  const message = data.get('message') || ''
+                  const subject = encodeURIComponent(subjectField)
+                  const body = encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`
+                  )
+                  window.location.href = `mailto:care@earthgrove.in?subject=${subject}&body=${body}`
+                }}
+              >
                 <div className={styles.field}>
                   <label className={styles.fieldLabel}>Your Name</label>
-                  <input type="text" placeholder="Enter Your Name" className={styles.input} />
+                  <input name="name" type="text" placeholder="Enter Your Name" className={styles.input} />
                 </div>
                 <div className={styles.field}>
                   <label className={styles.fieldLabel}>Your Email</label>
-                  <input type="email" placeholder="Enter Your Email" className={styles.input} />
+                  <input name="email" type="email" placeholder="Enter Your Email" className={styles.input} />
                 </div>
                 <div className={styles.field}>
                   <label className={styles.fieldLabel}>Your Phone Number</label>
-                  <input type="tel" placeholder="Enter Your Phone Number" className={styles.input} />
+                  <input name="phone" type="tel" placeholder="Enter Your Phone Number" className={styles.input} />
                 </div>
                 <div className={styles.field}>
                   <label className={styles.fieldLabel}>Subject</label>
-                  <input type="text" placeholder="Enter Your Subject" className={styles.input} />
+                  <input name="subject" type="text" placeholder="Enter Your Subject" className={styles.input} />
                 </div>
                 <div className={styles.field}>
                   <label className={styles.fieldLabel}>Message</label>
                   <textarea
+                    name="message"
                     placeholder="Enter Your Message"
                     className={`${styles.input} ${styles.textarea}`}
                     rows={5}

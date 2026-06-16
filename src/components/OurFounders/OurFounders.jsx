@@ -50,17 +50,15 @@ export default function OurFounders() {
         <motion.div className={styles.grid} variants={stagger}>
           {FOUNDERS.map((founder) => (
             <motion.div key={founder.id} className={styles.card} variants={fadeUp}>
-              {/* Photo — full bleed with overlay name */}
+              {/* Photo — compact, full bleed */}
               <div className={styles.cardImage}>
                 <img src={founder.image} alt={founder.name} loading="lazy" />
-                <div className={styles.imageOverlay}>
-                  <span className={styles.overlayRole}>{founder.role}</span>
-                </div>
               </div>
 
-              {/* Text body */}
+              {/* Text body — name & role lead */}
               <div className={styles.cardBody}>
                 <h3 className={styles.founderName}>{founder.name}</h3>
+                <span className={styles.founderRole}>{founder.role}</span>
                 <p className={styles.founderBio}>{founder.bio}</p>
               </div>
             </motion.div>

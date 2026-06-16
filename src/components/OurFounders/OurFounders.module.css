@@ -66,7 +66,7 @@
 
 /* ── Card image ── */
 .cardImage {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
 }
@@ -82,46 +82,37 @@
   transform: scale(1.06);
 }
 
-/* Role overlay at bottom of image */
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
-  display: flex;
-  align-items: flex-end;
-  padding: 20px 22px;
-}
-
-.overlayRole {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
-}
-
 /* ── Card body ── */
 .cardBody {
   padding: 24px 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .founderName {
   font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 600;
   color: var(--color-white);
   letter-spacing: var(--tracking-tight);
 }
 
+.founderRole {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+}
+
 .founderBio {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--color-white-60);
 }
 
