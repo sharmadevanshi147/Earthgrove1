@@ -1,8 +1,9 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Button from '../ui/Button'
-import heroPoster from '/assets/Hero.png'
 import styles from './Hero.module.css'
+
+const heroPoster = `${import.meta.env.BASE_URL}assets/Hero.jpg`
 
 const containerVariants = {
   hidden: {},
@@ -40,7 +41,7 @@ export default function Hero() {
           playsInline
           poster={heroPoster}
         >
-          <source src="/assets/HeroVideo.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}assets/HeroVideo.mp4`} type="video/mp4" />
         </video>
         <div className={styles.overlay} />
         <div className={styles.overlayGrain} aria-hidden="true" />
